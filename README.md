@@ -6,8 +6,8 @@
 ##Use this section to describe your final project and perhaps any links to relevant sites that help ##convey the concept and\or functionality.
 
 Project Description
+"Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to dcorate the rooms using the available list of design items
 
-Design Rooms App:
 MVP:-
 
 - Users/Designers can see available rooms to design
@@ -20,7 +20,7 @@ Stretch Goal:
 
 Above & Beyond:
 
-- Users can use design items to decorate the rooms.
+- Users can click design items to decorate the rooms.
 
 ## Project Links
 
@@ -44,11 +44,26 @@ Define the the React components and the architectural design of your app.
 The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
 MVP EXAMPLE
-Find and use external api
-Render data on page
-Allow user to interact with the page
+
+- Render data on page
+- Allow user to interact with the page
+- #Ex: - Find and use external api
+
+Controllers:
+
+- userController.js
+- roomController.js
+
+Models:
+
+- city.js
+- user.js
+- room.js
+- userroom.js
+
 PostMVP EXAMPLE
-Add localStorage or firebase for storage
+
+- #ex. Add localStorage or firebase for storage
 
 ## Components
 
