@@ -8,15 +8,38 @@
 Project Description
 "Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to dcorate the rooms using the available list of design items
 
-MVP:-
+Minimum Viable Product (MVP):-
 
 - Users/Designers can see available rooms to design
 - Users can see the design items (ex. sofa, side table, chair etc..) to design their prefeered room
+
+* A working full-stack application, using Node.js, Postgres, Express and EJS
+* Adhere to the MVC file structure: Models, Views, Controllers
+* At least one model with all 7 RESTful routes and full CRUD.
+* At least 2 models that are associated in some way (e.g. one-to-many, many-to-many, etc)
+* ❗ A git repository not inside the class repo.
+* At least one Github commit per day.
+* At least [10 User Stories](Writing Good User Stories)
+* Be deployed online and accessible to the public via Heroku
+* Include at least 10 User Stories
+* Include wireframes that you designed during the planning process
+* Have a link to your hosted working app in the README.md file in your github repo
+* A README.md file with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc. Inside Your README.md:
+  Check this file for a README template
 
 Stretch Goal:
 
 - more than 2 models
 - Authentication - encrypt-decrypt passwords
+
+Recommended Features
+
+- Add additional relationships
+- Include sign up/log in functionality, with encrypted passwords & an authorization flow
+- Use EJS Partials
+- Include portfolio-quality styling
+- Use a CSS framework like Bootstrap
+- Incorporate Google Maps
 
 Above & Beyond:
 
