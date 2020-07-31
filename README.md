@@ -86,6 +86,10 @@ Models:
 
 PostMVP EXAMPLE
 
+Addional Models:
+
+- userroom.js
+
 - #ex. Add localStorage or firebase for storage
 
 ## Components
