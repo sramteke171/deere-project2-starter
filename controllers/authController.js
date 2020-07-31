@@ -12,6 +12,11 @@ router.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
+// GET Design List
+router.get("/room", (req, res) => {
+  res.render("users/room.ejs");
+});
+
 // GET SIGNUP FORM
 router.get("/signup", (req, res) => {
   res.render("users/signup.ejs");
