@@ -55,9 +55,7 @@ deployment
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-ER Diagram: see ER_Digram.jpeg file (included with folders)
-https://www.diagrameditor.com/webapp/?ui=atlas&tr=0&gh=0&gl=0&gapi=0&od=0&db=0&lang=en
-
+ER Diagram: see ER_Digram.jpeg file (included under images folders)
 ![ER Diagram](/images/ER_Diagram.jpeg)
 
 wireframes
