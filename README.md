@@ -8,7 +8,7 @@
 Project Description
 "Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to dcorate the rooms using the available list of design items
 
-Minimum Viable Product (MVP):-
+## Minimum Viable Product (MVP):-
 
 - Users/Designers can see available rooms to design
 - Users can see the design items (ex. sofa, side table, chair etc..) to design their prefeered room
@@ -27,7 +27,7 @@ Minimum Viable Product (MVP):-
 * A README.md file with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc. Inside Your README.md:
   Check this file for a README template
 
-Stretch Goal:
+## Stretch Goal:
 
 - more than 2 models
 - Authentication - encrypt-decrypt passwords
@@ -41,7 +41,7 @@ Recommended Features
 - Use a CSS framework like Bootstrap
 - Incorporate Google Maps
 
-Above & Beyond:
+## Above & Beyond:
 
 - Users can click design items to decorate the rooms.
 
