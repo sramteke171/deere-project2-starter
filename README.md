@@ -29,6 +29,8 @@ deployment
 Wireframes
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
+ER Diagram: https://www.diagrameditor.com/webapp/?ui=atlas&tr=0&gh=0&gl=0&gapi=0&od=0&db=0&lang=en
+
 wireframes
 react architecture
 Define the the React components and the architectural design of your app.
