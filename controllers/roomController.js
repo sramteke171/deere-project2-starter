@@ -45,15 +45,15 @@ router.get("/:id/design", function (req, res) {
   });
 });
 
-//showItems
-router.get("/showSofa", (req, res) => {
-  RoomModel.findAll().then((rooms) => {
-    // res.render("users/room.ejs", {
-    res.render("users/sofa.ejs", {
-      rooms: rooms,
-    });
-  });
-});
+// //showItems
+// router.get("/showSofa", (req, res) => {
+//   RoomModel.findAll().then((rooms) => {
+//     // res.render("users/room.ejs", {
+//     res.render("users/sofa.ejs", {
+//       rooms: rooms,
+//     });
+//   });
+// });
 
 //edit - we need to first get the values before edit
 router.get("/:id/edit", function (req, res) {
