@@ -32,8 +32,10 @@ app.get("/", (req, res) => {
   res.render("users/index.ejs");
 });
 
-app.use("/auth", require("./controllers/authController.js"));
-app.use("/users", require("./controllers/usersController.js"));
+app.use("/authC", require("./controllers/authController.js"));
+app.use("/roomsC", require("./controllers/roomController.js"));
+app.use("/itemsC", require("./controllers/itemController.js"));
+app.use("/usersC", require("./controllers/usersController.js"));
 
 app.listen(process.env.PORT, () => {
   console.log("Nodemon listening");

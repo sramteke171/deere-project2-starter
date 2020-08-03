@@ -4,27 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/roomIndex.css" />
   </head>
   <body>
-    <h1>Design Index Page</h1>
-
+    <h2> Rooms for Design</h2>
     <nav>
-      <a href="/pokemon/new">Create a New Design</a>
+      <a href="/"> <h4> Homepage </h4> </a>
     </nav>
-
     <div>
-      <ul class="pokemon">
-        <li>
-          <a href="/pokemon/>"> </a> <br />
-          <img src="" alt="" />
-          <form action="/pokemon/" method="POST">
-            <input type="submit" value="DELETE" />
-          </form>
-          <!-- Add edit link here  -->
-          <a href="/pokemon/"> Edit</a>
-        </li>
+      <ul class="room">
+          <% for(let i=0; i<rooms.length; i++) { %>
+              <li>
+                  <h4> Design <a href="/roomsC/<%=rooms[i].id%>/design">  <%=rooms[i].name%> </h4></a> 
+                  <img src="<%= rooms[i].img%>" alt="" />
+                  
+                <form action="/roomsC/<%=rooms[i].id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="DELETE"/>
+                </form>
+                <!-- Add edit link here  -->
+                <a href="/roomsC/<%=rooms[i].id %>?_method=DELETE">Delete</a>
+                <a href="/roomsC/<%=rooms[i].id %>/edit">Edit</a>
+              </li>
+          <% } %>
       </ul>
-    </div>
-  </body>
+      <br>
+      <a href="/"> <h4> Back to Homepage </h4> </a>
+
+      </div>
+
+    </body>
 </html>

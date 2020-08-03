@@ -23,14 +23,14 @@ module.exports = {
         },
         {
           name: "Brad Smith",
-          username: "superman",
+          username: "brad",
           password: `smith`,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Craig Adams",
-          username: "batman",
+          username: "craig",
           password: "adams",
           createdAt: new Date(),
           updatedAt: new Date(),

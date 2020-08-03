@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const UserModel = require("../models").User;
+// const RoomModel = require("../models").Room;
 
 // SIGN OUT ROUTE
 router.get("/logout", (req, res) => {
@@ -12,10 +13,16 @@ router.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-// GET Design List
-router.get("/room", (req, res) => {
-  res.render("users/room.ejs");
-});
+// //check hot to move this into roomConroller.js
+// // INDEX ROUTE - GET ALL THE Rooms
+// router.get("/rooms", (req, res) => {
+//   RoomModel.findAll().then((rooms) => {
+//     // res.render("index.ejs", {
+//     res.render("users/room.ejs", {
+//       rooms: rooms,
+//     });
+//   });
+// });
 
 // GET SIGNUP FORM
 router.get("/signup", (req, res) => {
@@ -45,7 +52,7 @@ router.post("/signup", (req, res) => {
           );
           console.log(token);
           res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
-          res.redirect(`/users/profile/${newUser.id}`);
+          res.redirect(`/usersC/profile/${newUser.id}`);
         })
         .catch((err) => {
           console.log(err);
@@ -82,7 +89,7 @@ router.post("/login", (req, res) => {
           );
           console.log(token);
           res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
-          res.redirect(`/users/profile/${foundUser.id}`);
+          res.redirect(`/usersC/profile/${foundUser.id}`);
         } else {
           return res.sendStatus(400);
         }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sofa Items</title>
+  </head>
+  <body>
+    <div><img src="/images/sofa.jpg" /> sofa</div>
+
+    <div>
+      <ul class="items">
+          <% for(let i=0; i<rooms.length; i++) { %>
+              <li>
+                  <h4> Design <a href="/roomsC/<%=rooms[i].id%>/design">  <%=rooms[i].name%> </h4></a> 
+                  <img src="<%= rooms[i].img%>" alt="" />
+              </li>
+          <% } %>
+      </ul>
+      </div>
+
+    </body>
+</html>

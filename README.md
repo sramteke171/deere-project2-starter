@@ -82,7 +82,6 @@ Models:
 - city.js
 - user.js
 - room.js
-- userroom.js
 
 PostMVP EXAMPLE
 

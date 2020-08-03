@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Room</title>
+    <link rel="stylesheet" href="/css/edit.css" />
+  </head>
+  <body>
+    <h2>Design Room</h2>
+
+    <div>
+      <h3><%= room.name %></h3>
+      <!-- <img src=" <-- %= room.img % -->
+
+      <img src=" <%= room.img %> " alt="Rooms" usemap="#room_image-map" />
+      <map name="room_image-map">
+        <area
+          shape="rect"
+          target="_self"
+          alt="Wall_Painting"
+          title="Wall_Painting"
+          href=""
+          coords="24,44,140,120"
+        />
+        <area
+          target="_self"
+          alt="Couch/Sofa"
+          title="Couch/Sofa"
+          href="/itemsC"
+          coords="390,272,490,250"
+          shape="rect"
+        />
+        <area
+          target="_top"
+          alt="SideTable"
+          title="SideTable"
+          href=""
+          coords="220,270,320,250"
+          shape="rect"
+        />
+        <area
+          target="_self"
+          alt="Flowers"
+          title="Flowers"
+          href=""
+          coords=""
+          shape="circle"
+        />
+        <area
+          target="_parent"
+          alt="Carpet"
+          title="Carpet"
+          href=""
+          coords=""
+          shape="poly"
+        />
+        <area
+          shape="rect"
+          coords="184,6,253,27"
+          href=""
+          target="_blank"
+          alt=""
+        />
+        <area
+          shape="circle"
+          coords="60,136,20"
+          href=""
+          target="_blank"
+          alt=""
+        />
+        <area
+          shape="poly"
+          coords="130,6,253,96,223,106,130,39"
+          href=""
+          target="_blank"
+          alt=""
+        />
+      </map>
+
+      <div id="designItems"></div>
+
+      <form action="/roomsC/<%=room.id%>?_method=PUT" method="POST">
+        <input type="submit" name="" value="Confirm Design" />
+      </form>
+    </div>
+
+    <br />
+    <nav>
+      <a href="/roomsC/"> <h4>Back to Rooms</h4> </a> &nbsp; &nbsp;
+      <a href="/"> <h4>Homepage</h4> </a>
+    </nav>
+  </body>
+</html>

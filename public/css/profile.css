@@ -1,0 +1,26 @@
+h4 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  text-align: auto;
+  color: rgb(58, 33, 118);
+}
+/* nav {
+  display: flex;
+  width: 180px;
+  justify-content: auto;
+  text-align: auto;
+  /* grid-gap: 1em; */
+/* border: 1px solid black; 
+} */
+
+body {
+  display: flexbox;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 10vw 30vw 10vw;
+  /* grid-gap: 1em; */
+  text-align: center;
+
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}

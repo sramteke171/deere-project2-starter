@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Room Design</title>
+    <link rel="stylesheet" href="/css/edit.css" />
+  </head>
+  <body>
+    <h2>Edit Room</h2>
+
+    <div>
+      <h3><%= room.name %></h3>
+      <img src=" <%= room.img %> " />
+
+      <form action="/roomsC/<%=room.id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=room.name%>" /><br />
+        Image Source:
+        <input type="text" name="img" value="<%=room.img%>" /><br />
+        <input type="submit" name="" value="Edit Room Design" />
+      </form>
+    </div>
+
+    <br />
+    <nav>
+      <a href="/roomsC/"> <h4>Back to Rooms</h4> </a> &nbsp; &nbsp;
+      <a href="/"> <h4>Homepage</h4> </a>
+    </nav>
+  </body>
+</html>
