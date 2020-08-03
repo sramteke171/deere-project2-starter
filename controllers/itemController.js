@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const ItemModel = require("../models").Item;
+const RoomModel = require("../models").Room;
 // const UserModel = require("../models").User;
 // const Team = require("../models").Team;
 
@@ -20,6 +21,33 @@ router.get("/new", (req, res) => {
   res.render("users/newItem.ejs");
 });
 
+//POST ROUTE -Takes Form data & creates a new Item
+router.post("/", (req, res) => {
+  ItemModel.create(req.body).then((newItem) => {
+    res.redirect("/itemsC");
+  });
+});
+
+//find a room to render sofa
+//Render Sofa in the ROOM after onClick Sofa img
+router.get("/:id/design", function (req, res) {
+  RoomModel.findByPk(req.params.id).then((foundRoom) => {
+    res.render("users/design.ejs", {
+      room: foundRoom,
+    });
+  });
+});
+
+// router.get("/:id/design", (req, res) => {
+//   RoomModel.findAll().then((rooms) => {
+//      rooms: rooms,
+//    }).then (ItemModel.findAll().then((items) => {
+//   res.render("users/item.ejs", {
+//     items: items,
+//   });
+// });
+// });
+
 // // SHOW ROUTE - GET ONE Room
 // router.get("/:id", (req, res) => {
 //   RoomModel.findByPk(req.params.id).then((room) => {
@@ -29,28 +57,11 @@ router.get("/new", (req, res) => {
 //   });
 // });
 
-//POST ROUTE -Takes Form data & creates a new Item
-router.post("/", (req, res) => {
-  ItemModel.create(req.body).then((newItem) => {
-    res.redirect("/itemsC");
-  });
-});
-
-// //DESIGN
-// router.get("/:id/design", function (req, res) {
-//   RoomModel.findByPk(req.params.id).then((foundRoom) => {
-//     res.render("users/design.ejs", {
-//       room: foundRoom,
-//     });
-//   });
-// });
-
-// //showItems
+// //show all Sofa
 // router.get("/showSofa", (req, res) => {
-//   ItemModel.findAll().then((items) => {
-//     // res.render("users/room.ejs", {
-//     res.render("users/sofa.ejs", {
-//       items: items,
+//   ItemModel.findAll().then((sofas) => {
+//     res.render("users/design.ejs", {
+//       sofas: sofas,
 //     });
 //   });
 // });

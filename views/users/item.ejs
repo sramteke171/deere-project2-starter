@@ -19,10 +19,22 @@
 <table>
   <tr>
     <td title="Sofa"> <h3>Sofa</h3>
+
+<!-- placeMeInRoom -->
+<% 
+ function placeMeInRoom(url) {
+  console.log("sofa clicked");
+   window.location = url;
+   //window.open = url;
+
+}; %>
+
       <% for(let i=0; i<items.length; i++) { %>
         <!-- <li> -->
-            <h4> <a href="/itemsC/<%=items[i].id%>/design">  </h4></a> 
-            <img src="<%= items[i].sofa_img%>" alt="" />
+            <h4> <a href="/itemsC/<%=items[i].id%>/design">  </h4> 
+            <img src="<%= items[i].sofa_img%>" alt="" /> </a>
+
+
         <!-- </li> -->
     <% } %>
     </td> 
@@ -80,3 +92,14 @@
 
     </body>
 </html>
+
+
+<!-- % 
+//console.log("sofa [i]", items[i].sofa_img);
+ function placeMeInRoom() {
+  console.log("sofa clicked", items[i].sofa_img);
+   //window.location.href = this.id + '.ejs'; 
+   // window.location = url;
+   //onClick="placeMeInRoom('../users/design.ejs')"
+
+}; %> -->
