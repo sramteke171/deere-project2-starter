@@ -16,6 +16,7 @@
       <img src=" <%= room.img %> " alt="Rooms" usemap="#room_image-map" />
       <map name="room_image-map">
         <area
+          id="painting"
           shape="rect"
           target="_self"
           alt="Wall_Painting"
@@ -24,10 +25,11 @@
           coords="24,44,140,120"
         />
         <area
+          id="sofa"
           target="_self"
           alt="Couch/Sofa"
           title="Couch/Sofa"
-          href="/itemsC"
+          href="/itemsC/<%=id%>/items"
           coords="390,272,490,250"
           shape="rect"
         />
@@ -79,6 +81,7 @@
       </map>
 
       <!-- <div id="designItems"></div> -->
+      <div id="transparentBox" class="transparentBox"></div>
 
       <form action="/roomsC/<%=room.id%>?_method=PUT" method="POST">
         <input type="submit" name="" value="Confirm Design" />
@@ -90,5 +93,7 @@
       <a href="/roomsC/"> <h4>Back to Rooms</h4> </a> &nbsp; &nbsp;
       <a href="/"> <h4>Homepage</h4> </a>
     </nav>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>

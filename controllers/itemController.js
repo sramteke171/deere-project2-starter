@@ -16,6 +16,26 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/:id/items", (req, res) => {
+  ItemModel.findAll().then((items) => {
+    res.render("users/item.ejs", {
+      items: items,
+      id: req.params.id,
+    });
+  });
+});
+
+//from item.ejs, find a room to render sofa after onClick Sofa img
+//Render Sofa in the ROOM (design.ejs) after onClick Sofa img
+router.get("/:id/design", function (req, res) {
+  RoomModel.findByPk(req.params.id).then((foundRoom) => {
+    res.render("users/design.ejs", {
+      room: foundRoom,
+      id: req.params.id,
+    });
+  });
+});
+
 //NEW ROUTE - Send Empty form
 router.get("/new", (req, res) => {
   res.render("users/newItem.ejs");
@@ -27,26 +47,6 @@ router.post("/", (req, res) => {
     res.redirect("/itemsC");
   });
 });
-
-//find a room to render sofa
-//Render Sofa in the ROOM after onClick Sofa img
-router.get("/:id/design", function (req, res) {
-  RoomModel.findByPk(req.params.id).then((foundRoom) => {
-    res.render("users/design.ejs", {
-      room: foundRoom,
-    });
-  });
-});
-
-// router.get("/:id/design", (req, res) => {
-//   RoomModel.findAll().then((rooms) => {
-//      rooms: rooms,
-//    }).then (ItemModel.findAll().then((items) => {
-//   res.render("users/item.ejs", {
-//     items: items,
-//   });
-// });
-// });
 
 // // SHOW ROUTE - GET ONE Room
 // router.get("/:id", (req, res) => {

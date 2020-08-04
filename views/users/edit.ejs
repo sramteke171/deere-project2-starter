@@ -14,14 +14,15 @@
       <img src=" <%= room.img %> " />
 
       <form action="/roomsC/<%=room.id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=room.name%>" /><br />
-        Image Source:
-        <input type="text" name="img" value="<%=room.img%>" /><br />
+        <label> Name: </label>
+        <input type="text" name="name" value="<%=room.name%>" />
+        <label> Image Source: </label>
+        <input type="text" name="img" value="<%=room.img%>" />
         <input type="submit" name="" value="Edit Room" />
       </form>
     </div>
 
-    <br />
+    <!-- <br /><br /> -->
     <nav>
       <a href="/roomsC/"> <h4>Back to Rooms</h4> </a> &nbsp; &nbsp;
       <a href="/"> <h4>Homepage</h4> </a>

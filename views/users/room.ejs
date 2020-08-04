@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rooms for Design</title>
     <link rel="stylesheet" href="/css/roomIndex.css" />
   </head>
   <body>
@@ -12,26 +12,26 @@
        <a href="/roomsC/new"> <h4> New Room </h4> </a> &nbsp;&nbsp;
        <a href="/"> <h4> Homepage </h4> </a>
     </nav>
+    
     <div>
       <ul class="room">
           <% for(let i=0; i<rooms.length; i++) { %>
               <li>
-                  <h4> Design <a href="/roomsC/<%=rooms[i].id%>/design">  <%=rooms[i].name%> </h4></a> 
-                  <img src="<%= rooms[i].img%>" alt="" />
+                  <h4> Design <a href="/roomsC/<%=rooms[i].id%>/design"> <label> <%=rooms[i].name%> </label</h4> 
+                  <img src="<%= rooms[i].img%>" alt="" /> </a>
                   
-                <form action="/roomsC/<%=rooms[i].id %>?_method=DELETE" method="POST">
+                <!-- <form action="/roomsC/<%=rooms[i].id %>?_method=DELETE" method="POST">
                   <input type="submit" value="DELETE"/>
-                </form>
-                <!-- Add edit link here  -->
-                <a href="/roomsC/<%=rooms[i].id %>?_method=DELETE">Delete</a>
-                <a href="/roomsC/<%=rooms[i].id %>/edit">Edit</a>
+                </form> -->
+                
+                <a href="/roomsC/<%=rooms[i].id %>/delete"> <h4><label> Delete </label></h4></a>
+                <a href="/roomsC/<%=rooms[i].id %>/edit"> <h4> <label> Edit </label> </h4></a>
               </li>
           <% } %>
       </ul>
-      <br>
-      <a href="/"> <h4> Back to Homepage </h4> </a>
-      
+      <br><br>
+      <a href="/"> <h4> Back to Homepage </h4> </a> 
       </div>
-
-    </body>
+      
+      </body>
 </html>

@@ -41,6 +41,7 @@ router.get("/:id/design", function (req, res) {
   RoomModel.findByPk(req.params.id).then((foundRoom) => {
     res.render("users/design.ejs", {
       room: foundRoom,
+      id: req.params.id,
     });
   });
 });
@@ -78,8 +79,15 @@ router.put("/:id", (req, res) => {
 // });
 // });
 
-//delete Room
+//delete Room - delete button
 router.delete("/:id", (req, res) => {
+  RoomModel.destroy({ where: { id: req.params.id } }).then(() => {
+    res.redirect("/roomsC");
+  });
+});
+
+//delete Room -href link
+router.delete("/:id/delete", function (req, res) {
   RoomModel.destroy({ where: { id: req.params.id } }).then(() => {
     res.redirect("/roomsC");
   });

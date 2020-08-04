@@ -58,3 +58,36 @@ nav {
   /* grid-gap: 1em; */
   /* border: 1px solid black; */
 }
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+li {
+  display: inline-block;
+  width: 33%;
+  /* padding: 20px; */
+  /* width: 100%; */
+}
+
+/* 
+div {
+  text-align: center;
+  justify-items: center;
+} */
+
+input,
+label {
+  display: inline;
+
+  /* align-items: center;
+  text-align: center; */
+
+  /* float: center;
+  margin: 5px; */
+}
