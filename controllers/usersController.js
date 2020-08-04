@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const UserModel = require("../models").User;
+const CityModel = require("../models").City;
 
 // INDEX ROUTE - GET ALL THE USERS
 router.get("/", (req, res) => {
@@ -12,11 +13,27 @@ router.get("/", (req, res) => {
   });
 });
 
-// GET USERS PROFILE
+// // GET USERS PROFILE
+// router.get("/profile/:id", (req, res) => {
+//   UserModel.findByPk(req.params.id).then((userProfile) => {
+//     res.render("users/profile.ejs", {
+//       user: userProfile,
+//     });
+//   });
+// });
+
+//Getting USER and then associated City- show profile page after lOGIN
+// GET USER PROFILE - show profile page after lOGIN
 router.get("/profile/:id", (req, res) => {
-  UserModel.findByPk(req.params.id).then((userProfile) => {
-    res.render("users/profile.ejs", {
-      user: userProfile,
+  UserModel.findByPk(req.params.id, {
+    include: [{ model: CityModel }],
+  }).then((userProfile) => {
+    CityModel.findAll().then((allCities) => {
+      console.log(userProfile);
+      res.render("users/profile.ejs", {
+        user: userProfile,
+        cities: allCities,
+      });
     });
   });
 });

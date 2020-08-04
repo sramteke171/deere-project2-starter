@@ -8,20 +8,27 @@
   </head>
 
   <body>
-    <h1>Welcome <%= user.name %> - It's your Profile Page</h1>
+    <h2>Welcome <%= user.name %> - It's your Profile Page</h2>
 
     <div>
-      <form action="/usersC/profile/<%=user.id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=user.name%>" /><br />
-        <br />
+      <form action="/usersC/profile/<%=user.id%>?_method=PUT" method="POST"> <br><br>
+        Name: <input type="text" name="name" value="<%=user.name%>" /><br /> <br />
         Username:
-        <input type="text" name="username" value="<%=user.username%>" />
-        <br />
-        <br />
+        <input type="text" name="username" value="<%=user.username%>" /> <br /> <br />
         Password:
-        <input type="text" name="password" value="<%=user.password%>" /><br />
-        <br />
+        <input type="text" name="password" value="<%=user.password%>" /><br /> <br />
+
+       <label for="CityId">City:</label>
+        <select name="cityId">
+        <option value="none">--Cities--</option>
+        <% for ( let i = 0; i < cities.length; i++ ) { %>
+          <option value="<%=cities[i].id%>" <%= cities[i].id===user.cityId? "selected":'' %> >
+            <%=cities[i].name%>
+          </option>
+        <% } %>
+      </select> <br> <br>
         <input type="submit" value="Edit Profile" />
+
       </form>
       <br />
       <form action="/usersC/<%= user.id %>?_method=DELETE" method="POST">
@@ -33,6 +40,7 @@
     <nav>
       <h4><a href="/roomsC"> Current Design List</a></h4>
       <h4><a href="/">Back to Homepage</a></h4>
+      <h4><a href="/authC/logout">LogOut </a></h4>
     </nav>
   </body>
 </html>
