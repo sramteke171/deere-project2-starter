@@ -63,7 +63,10 @@ router.post("/signup", (req, res) => {
 
 // GET LOGIN
 router.get("/login", (req, res) => {
+  // document.getElementById("animate-area").innerHTML =
+  //   '<object type="type/html" data="users/login.ejs" ></object>';
   res.render("users/login.ejs");
+  // res.render("users/index.ejs");
 });
 
 // POST LOGIN

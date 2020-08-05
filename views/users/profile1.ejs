@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+
+  <body>
+    <h2>Welcome <%= user.name %> - It's your Profile Page</h2>
+
+    <div>
+      <form action="/usersC/profile/<%=user.id%>?_method=PUT" method="POST"> <br><br>
+        Name: <input type="text" name="name" value="<%=user.name%>" /><br /> <br />
+        Username:
+        <input type="text" name="username" value="<%=user.username%>" /> <br /> <br />
+        Password:
+        <input type="text" name="password" value="<%=user.password%>" /><br /> <br />
+
+       <label for="CityId">City:</label>
+        <select name="cityId">
+        <option value="none">--Cities--</option>
+        <% for ( let i = 0; i < cities.length; i++ ) { %>
+          <option value="<%=cities[i].id%>" <%= cities[i].id===user.cityId? "selected":'' %> >
+            <%=cities[i].name%>
+          </option>
+        <% } %>
+      </select> <br> <br>
+        <input type="submit" value="Edit Profile" />
+
+      </form>
+      <br />
+      <form action="/usersC/<%= user.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete User" />
+      </form>
+    </div>
+
+    <br /><br />
+    <nav>
+      <h4><a href="/roomsC"> Current Design List</a></h4>
+      <h4><a href="/">Back to Homepage</a></h4>
+      <h4><a href="/authC/logout">LogOut </a></h4>
+    </nav>
+  </body>
+</html>

@@ -6,41 +6,65 @@
     <title>User Profile Page</title>
     <link rel="stylesheet" href="/css/profile.css" />
   </head>
-
   <body>
-    <h2>Welcome <%= user.name %> - It's your Profile Page</h2>
+    <h1>Room Designer</h1>
 
-    <div>
-      <form action="/usersC/profile/<%=user.id%>?_method=PUT" method="POST"> <br><br>
-        Name: <input type="text" name="name" value="<%=user.name%>" /><br /> <br />
+    <div class="wrapperDiv">
+      <header class="grid-item">
+        <nav>
+          <ul>
+            <li>
+            <h4><a href="/authC/logout">LogOut </a></h4>
+            </li>
+            <li>
+              <h4><a href="/"> Homepage </a></h4>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <section>
+    <!-- <div id="animate-area" class="room"></div> --> 
+      <div>
+        <h2>Welcome <%= user.name %> </h2>
+
+      <form action="/usersC/profile/<%=user.id%>?_method=PUT" method="POST"> 
+        Name: <input type="text" name="name" value="<%=user.name%>" /><br /> 
         Username:
-        <input type="text" name="username" value="<%=user.username%>" /> <br /> <br />
+        <input type="text" name="username" value="<%=user.username%>" /> <br /> 
         Password:
-        <input type="text" name="password" value="<%=user.password%>" /><br /> <br />
+        <input type="text" name="password" value="<%=user.password%>" /><br /> 
 
        <label for="CityId">City:</label>
         <select name="cityId">
-        <option value="none">--Cities--</option>
+        <option value=-1 AllowUnsetValue="true">--Cities--</option>
         <% for ( let i = 0; i < cities.length; i++ ) { %>
           <option value="<%=cities[i].id%>" <%= cities[i].id===user.cityId? "selected":'' %> >
             <%=cities[i].name%>
           </option>
         <% } %>
-      </select> <br> <br>
+      </select> <br> <br> 
         <input type="submit" value="Edit Profile" />
-
       </form>
-      <br />
+       
       <form action="/usersC/<%= user.id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete User" />
       </form>
-    </div>
+      </div>
+    </section>
 
-    <br /><br />
-    <nav>
-      <h4><a href="/roomsC"> Current Design List</a></h4>
-      <h4><a href="/">Back to Homepage</a></h4>
-      <h4><a href="/authC/logout">LogOut </a></h4>
-    </nav>
+    <section>
+      <div class="current_designs">
+        <a href="/roomsC"> <h3>Current Designs</h3></a>
+      </div>
+    </section>
+
+    <footer class="grid-item">
+      <p>
+        &copy;Designer App, 2020 copyrights. &nbsp; &nbsp;&nbsp; Send feedback
+        to @sachin06jd@gmail.com
+      </p>
+    </footer>
   </body>
 </html>

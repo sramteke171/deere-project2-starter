@@ -21,3 +21,195 @@
 
     </body>
 </html> -->
+
+LOGIN---->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+
+  <body>
+    <h2>Login</h2>
+
+    <div class="wrapperDiv">
+      <header class="grid-item">
+        <nav>
+          <ul>
+            <li>
+              <h4><a href="/"> Homepage </a></h4>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div>
+      <form action="/authC/login" method="POST">
+        Username: <input type="text" name="username" /> <br />
+        <br />
+        Password: <input type="text" name="password" /><br />
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+    <footer class="grid-item">
+      <p>
+        &copy;Designer App, 2020 copyrights. &nbsp; &nbsp;&nbsp; Send feedback
+        to @sachin06jd@gmail.com
+      </p>
+    </footer>
+  </body>
+</html>
+
+SIGNUP ---->>>>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+
+  <body>
+    <h2>Sign Up</h2>
+    <nav>
+      <a href="/"> <h4>Homepage</h4> </a>
+    </nav>
+
+    <div>
+      <form action="/authC/signup" method="POST">
+        Name: <input type="text" name="name" /><br />
+        <br />
+        Username: <input type="text" name="username" /> <br />
+        <br />
+        Password: <input type="text" name="password" /><br />
+        <br />
+        <input type="submit" value="SignUp" />
+      </form>
+    </div>
+  </body>
+</html>
+
+PROFILE ---->>>>>>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+
+  <body>
+    <h2>Welcome <%= user.name %> - It's your Profile Page</h2>
+
+    <div>
+      <form action="/usersC/profile/<%=user.id%>?_method=PUT" method="POST"> <br><br>
+        Name: <input type="text" name="name" value="<%=user.name%>" /><br /> <br />
+        Username:
+        <input type="text" name="username" value="<%=user.username%>" /> <br /> <br />
+        Password:
+        <input type="text" name="password" value="<%=user.password%>" /><br /> <br />
+
+       <label for="CityId">City:</label>
+        <select name="cityId">
+        <option value="none">--Cities--</option>
+        <% for ( let i = 0; i < cities.length; i++ ) { %>
+          <option value="<%=cities[i].id%>" <%= cities[i].id===user.cityId? "selected":'' %> >
+            <%=cities[i].name%>
+          </option>
+        <% } %>
+      </select> <br> <br>
+        <input type="submit" value="Edit Profile" />
+
+      </form>
+      <br />
+      <form action="/usersC/<%= user.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete User" />
+      </form>
+    </div>
+
+    <br /><br />
+    <nav>
+      <h4><a href="/roomsC"> Current Design List</a></h4>
+      <h4><a href="/">Back to Homepage</a></h4>
+      <h4><a href="/authC/logout">LogOut </a></h4>
+    </nav>
+  </body>
+</html>
+
+
+
+
+NEW ROOM --->>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Room</title>
+    <link rel="stylesheet" href="/css/new.css" />
+  </head>
+  <body>
+    <h2>Create New Room</h2>
+    <nav>
+      <h4><a href="/roomsC/">Back to Rooms</a> <h4> &nbsp;&nbsp;
+      <h4><a href="/">Homepage</a> </h4>
+    </nav>
+
+    <div>
+      <!--  NOTE: action will be the route, method will be the HTTP verb-->
+      <form action="/roomsC" method="POST">
+        Name: <input type="text" name="name" placeholder="Room name" /><br />
+        Image Source:
+        <input type="text" name="img" placeholder="image URL" /><br />
+        <input type="submit" name="" value="Create Room" />
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+room ----->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooms for Design</title>
+    <link rel="stylesheet" href="/css/roomIndex.css" />
+  </head>
+  <body>
+    <h2> Rooms for Design</h2>
+    <nav>
+       <a href="/roomsC/new"> <h4> New Room </h4> </a> 
+       <a href="/"> <h4> Homepage </h4> </a>
+    </nav>
+    
+    <div>
+      <ul class="room">
+          <% for(let i=0; i<rooms.length; i++) { %>
+              <li>
+                  <h4> Design <a href="/roomsC/<%=rooms[i].id%>/design"> <label> <%=rooms[i].name%> </label</h4> 
+                  <img src="<%= rooms[i].img%>" alt="" /> </a>
+                  
+                <!-- <form action="/roomsC/<%=rooms[i].id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="DELETE"/>
+                </form> -->
+                
+                <a href="/roomsC/<%=rooms[i].id %>/delete"> <h4><label> Delete </label></h4></a>
+                <a href="/roomsC/<%=rooms[i].id %>/edit"> <h4> <label> Edit </label> </h4></a>
+              </li>
+          <% } %>
+      </ul>
+      <br><br>
+      <a href="/"> <h4> Back to Homepage </h4> </a> 
+      </div>
+      
+      </body>
+</html>

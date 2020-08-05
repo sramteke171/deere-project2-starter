@@ -48,24 +48,6 @@ router.post("/", (req, res) => {
   });
 });
 
-// // SHOW ROUTE - GET ONE Room
-// router.get("/:id", (req, res) => {
-//   RoomModel.findByPk(req.params.id).then((room) => {
-//     res.render("users/room.ejs", {
-//       room: room,
-//     });
-//   });
-// });
-
-// //show all Sofa
-// router.get("/showSofa", (req, res) => {
-//   ItemModel.findAll().then((sofas) => {
-//     res.render("users/design.ejs", {
-//       sofas: sofas,
-//     });
-//   });
-// });
-
 //edit - we need to first get the values before edit
 router.get("/:id/edit", function (req, res) {
   ItemModel.findByPk(req.params.id).then((foundItem) => {
@@ -93,3 +75,21 @@ router.delete("/:id", (req, res) => {
 });
 
 module.exports = router;
+
+// // SHOW ROUTE - GET ONE Room
+// router.get("/:id", (req, res) => {
+//   RoomModel.findByPk(req.params.id).then((room) => {
+//     res.render("users/room.ejs", {
+//       room: room,
+//     });
+//   });
+// });
+
+// //show all Sofa
+// router.get("/showSofa", (req, res) => {
+//   ItemModel.findAll().then((sofas) => {
+//     res.render("users/design.ejs", {
+//       sofas: sofas,
+//     });
+//   });
+// });

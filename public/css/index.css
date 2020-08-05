@@ -36,12 +36,47 @@ nav ul li a {
   text-decoration: none;
 }
 
-div.room {
-  background: url(/images/cityroom.jpg) repeat;
+div.current_designs {
+  /* background: url(/images/r1.jpg) repeat; */
+  background: url(/images/r1.jpg);
   height: 280px;
-  width: 640px;
+  width: 200px;
   border: 1px solid black;
   background-size: contain;
+}
+
+/* div.current_design1 {
+  background: url(/images/r1.jpg);
+  height: 140px;
+  width: 200px;
+  border: 1px solid black;
+  background-size: contain;
+}
+div.current_design2 {
+  background: url(/images/r4.jpg);
+  height: 140px;
+  width: 200px;
+  border: 1px solid black;
+  background-size: contain;
+} */
+
+/* animate the image */
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+#animate-area {
+  height: 280px;
+  width: 640px;
+  background-image: url(/images/cityroom.jpg);
+  background-size: contain;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite alternate;
 }
 
 /* div.transparentBox {
@@ -103,7 +138,7 @@ h3 {
   font-size: medium;
   text-align: center;
   vertical-align: middle;
-  color: rgb(58, 33, 118);
+  color: rgb(8, 12, 19);
 }
 h4 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-// Add Room model
 const RoomModel = require("../models").Room;
 // const UserModel = require("../models").User;
 // const Team = require("../models").Team;
@@ -65,6 +64,15 @@ router.put("/:id", (req, res) => {
   });
 });
 
+//delete Room - delete button
+router.delete("/:id", (req, res) => {
+  RoomModel.destroy({ where: { id: req.params.id } }).then(() => {
+    res.redirect("/roomsC");
+  });
+});
+
+module.exports = router;
+
 //fruit
 // Fruit.update(req.body, {
 //   where: { id: req.params.id },
@@ -78,19 +86,3 @@ router.put("/:id", (req, res) => {
 //   });
 // });
 // });
-
-//delete Room - delete button
-router.delete("/:id", (req, res) => {
-  RoomModel.destroy({ where: { id: req.params.id } }).then(() => {
-    res.redirect("/roomsC");
-  });
-});
-
-//delete Room -href link
-router.delete("/:id/delete", function (req, res) {
-  RoomModel.destroy({ where: { id: req.params.id } }).then(() => {
-    res.redirect("/roomsC");
-  });
-});
-
-module.exports = router;
