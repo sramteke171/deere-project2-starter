@@ -108,13 +108,11 @@ For example, roomItems with many to many association
 
 ## Components
 
-Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
+#Component Description
 
-Component Description
-App This will make the initial data pull and include React Router
-Header This will render the header include the nav
-Footer This will render the header include the nav
+- App:- This will make the initial data pull and include React Router
+- Header This will render the header include the nav
+- Footer This will render the header include the nav
 
 ## Time Frames
 
