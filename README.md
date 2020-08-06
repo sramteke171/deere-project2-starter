@@ -1,6 +1,6 @@
 ## Project 2 - Sachin Ramteke
 
-![designerApp](homepage.gif)
+![designerApp](/images/homepage.gif)
 
 ## Project Overview
 
@@ -45,7 +45,7 @@ Recommended Features
 
 ## Above & Beyond:
 
-- Users can click design items to decorate the rooms.
+- Users can "click"/"Drag and drop" design items to decorate the rooms.
 
 ## Project Links
 
@@ -68,11 +68,12 @@ Define the the React components and the architectural design of your app.
 
 The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-MVP EXAMPLE
+MVP
+#Ex: - Find and use external api
 
-- Render data on page
+- Render data on webpage
 - Allow user to interact with the page
-- #Ex: - Find and use external api
+- Signup, Login, Logout. CRUD - Create, Read, Update, Delete functioanlities
 
 Controllers:
 
