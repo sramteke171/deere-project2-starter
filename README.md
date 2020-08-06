@@ -116,8 +116,6 @@ For example, roomItems with many to many association
 
 ## Time Frames
 
-Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
 Component Priority Estimated Time Time Invetsted Actual Time
 
 - Adding Form H 4hrs 3.5hrs 3.5hrs
