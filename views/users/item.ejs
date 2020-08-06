@@ -23,14 +23,8 @@
         </nav>
       </header>
     </div>
-     <nav>
-      <a href="/roomsC"> <h4>Back to Rooms</h4> </a> &nbsp; &nbsp;
-      <a href="/"> <h4>Homepage</h4> </a>
-    </nav>
-
-    <div>
-      <!-- <ul class="items"></ul> -->
-
+     
+<div>
 <table>
   <tr>
     <td title="Sofa"> <h3>Sofa</h3>
@@ -41,64 +35,47 @@
   console.log("sofa clicked");
    window.location = url;
    //window.open = url;
-
 }; %>
 
       <% for(let i=0; i<items.length; i++) { %>
-        <!-- <li> -->
             <h4> <a href="/itemsC/<%=id%>/design">  </h4> 
-            <img src="<%= items[i].sofa_img%>" class = "allSofaImg"alt="" /> </a>
-
-
-        <!-- </li> -->
+            <img src="<%= items[i].sofa_img%>" class = "allSofaImg" alt="" /> </a>
     <% } %>
     </td> 
     <td> <h3>Chair</h3>
-
       <% for(let i=0; i<items.length; i++) { %>
-        <!-- <li> -->
             <h4> <a href="/itemsC/<%=id%>/design">  </h4>
             <img src="<%= items[i].chair_img%>" class = "imgAll" alt="" /> </a> 
-        <!-- </li> -->
-    <% } %>
+       <% } %>
     </td>
     <td> <h3>SideTable</h3>
       <% for(let i=0; i<items.length; i++) { %>
-        <!-- <li> -->
             <h4> <a href="/itemsC/<%=id%>/design">  </h4>
             <img src="<%= items[i].stable_img%>" alt="" /> </a> 
-        <!-- </li> -->
     <% } %>
     </td> 
     <td> <h3>CoffeeTable</h3>
       <% for(let i=0; i<items.length; i++) { %>
-        <!-- <li> -->
             <h4> <a href="/itemsC/<%=id%>/design">  </h4>
             <img src="<%= items[i].ctable_img%>" alt="" /> </a> 
-        <!-- </li> -->
-    <% } %>
+      <% } %>
     </td> 
-    <td><h3>Carpet</h3>
+    <td> <h3>Carpet</h3>
     <% for(let i=0; i<items.length; i++) { %>
-      <!-- <li> -->
           <h4>  <a href="/itemsC/<%=id%>/design">  </h4>
           <img src="<%= items[i].carpet_img%>" alt="" /> </a> 
-      <!-- </li> -->
-  <% } %>
+      <% } %>
   </td>
    <td><h3>Painting</h3>
     <% for(let i=0; i<items.length; i++) { %>
-      <!-- <li> -->
           <h4> <a href="/itemsC/<%=id%>/design">  </h4>
           <img src="<%= items[i].painting_img%>" alt="" /> </a> 
-      <!-- </li> -->
-  <% } %>
+    <% } %>
    </td>
   </tr>
 </table>
-
-<!-- </ul> -->
 </div>
+
 <script src="/js/script.js"></script>
     </body>
 </html>

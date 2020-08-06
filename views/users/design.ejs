@@ -8,7 +8,6 @@
   </head>
   <body>
     <h2>Design Room</h2>
-
     <div>
       <h3><%= room.name %></h3>
 
@@ -79,19 +78,60 @@
         />
       </map>
 
-      <!-- <div id="designItems"></div> -->
-      <div id="transparentBox" class="transparentBox"></div>
+      <div id="transparentBox" class="transparentBox">
+        <!-- <div id="mydivheader"><img src="/images/s1.jpg" id="sofa" /></div> -->
+      </div>
+
+      <div id="designItems"></div>
+
+      <script>
+        let imgAll = document.querySelectorAll(".allSofaImg");
+        let displayItem = () => {
+          //create img, add class to img, then add img to newly created DIV(imgDiv)
+          let img = document.createElement("img");
+          img.classList.add("img");
+          console.log(imgSrc);
+
+          img.src = imgSrc;
+          console.log(img);
+          // imageDiv.appendChild(img);
+          // transparentDiv.appendChild(imageDiv); };
+        };
+        let imgSrc = "";
+        for (let i = 0; i < imgAll.length; i++) {
+          imgSrc = imgAll[i].getAttribute("src");
+          console.log("imgsrc is", imgSrc);
+          alert(imgSrc);
+          displayItem();
+        }
+      </script>
+
+      <div id="div_Sofa">
+        <div id="div_Sofa_Header"><img src="/images/s1.jpg" id="sofa" /></div>
+      </div>
+
+      <div id="div_Chair">
+        <div id="div_Chair_Header"><img src="/images/c1.jpg" id="chair" /></div>
+      </div>
+      <!-- <div id="mydivheader"> <img src="/images/c1.jpg" id="chair" /> </div>
+          <img src="/images/st1.jpg" id="sideTable" />
+          <img src="/images/ct1.jpg" id="coffeeTable" />
+          <img src="/images/carpet1.jpg" id="carpet" />
+          <img src="/images/painting1.jpg" id="painting" />
+        </div>
+      </div> -->
 
       <form action="/roomsC/<%=room.id%>?_method=PUT" method="POST">
         <input type="submit" name="" value="Confirm Design" />
       </form>
     </div>
 
-    <br />
-    <!-- <nav>
-      <a href="/roomsC/"> <h4>Back to Rooms</h4> </a> &nbsp; &nbsp;
-      <a href="/"> <h4>Homepage</h4> </a>
-    </nav> -->
+    <footer class="grid-item">
+      <p>
+        &copy;Designer App, 2020 copyrights. &nbsp; &nbsp;&nbsp; Send feedback
+        to @sachin06jd@gmail.com
+      </p>
+    </footer>
 
     <script src="/js/script.js"></script>
   </body>
