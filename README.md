@@ -41,7 +41,7 @@
 
 github repo :- https://github.com/sramteke171/deere-project2-starter
 
-deployment
+deployment :- https://room-designer-app.herokuapp.com/
 
 ## Wireframes
 
