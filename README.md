@@ -27,23 +27,16 @@
 
 * A README.md file with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc.
 
-## Stretch Goal:
+## MVP - Stretch Goal:
 
 - more than 2 models
 - Authentication - encrypt-decrypt passwords
 
-Nice to have - Recommended Features
+#Nice to have - Recommended Features
 
 - Add additional relationships
 - Include sign up/log in functionality, with encrypted passwords & an authorization flow
 - Use EJS Partials
-- Include portfolio-quality styling
-- Use a CSS framework like Bootstrap
-- Incorporate Google Maps
-
-## Above & Beyond:
-
-- Users can "click"/"Drag and drop" design items to decorate the rooms.
 
 ## Project Links
 
@@ -99,10 +92,16 @@ Models:
 - item.js
 - index.js
 
-## PostMVP -
+## PostMVP - Stretch Goal:
 
-PostMVP, there would be addional Models:
-For example, roomItems with many to many association
+- Use a CSS framework like Bootstrap
+- Incorporate Google Maps
+
+## Above & Beyond:
+
+- Users can "click"/"Drag and drop" design items to decorate the rooms.
+  PostMVP, there would be addional Models:
+  For example, roomItems with many to many association
 
 - roomItems.js
 
