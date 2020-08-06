@@ -209,6 +209,7 @@ Component Priority Estimated Time Time Invetsted Actual Time
 
 ## Issues and Resolutions
 
-Example,
-ERROR: app.js:34 Uncaught SyntaxError: Unexpected identifier
-RESOLUTION: Missing comma after first object in sources {} object
+ERROR:
+Refused to apply style from 'https://room-designer-app.herokuapp.com/css/itemIndex.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+
+RESOLUTION: Heroku didnt recognized Capital letter in the file name. Rename the file with all lower case
