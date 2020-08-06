@@ -43,7 +43,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* body {
+body {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: 10vw 30vw 10vw;
@@ -52,7 +52,7 @@ nav ul li a {
   margin: 0 auto;
   max-width: 56em;
   padding: 1em 0;
-} */
+}
 
 img {
   padding: 5x;
