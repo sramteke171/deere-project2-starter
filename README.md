@@ -77,15 +77,20 @@ Define the the React components and the architectural design of your app.
 
 #MVP User Stories:
 
-- US01:
+1.  UserStory 01: App Landing page
+    - As a user, I would like to see the homepage of room-designer app with the functions to signup a new user and Login the existing user
+2.  UserStory 02: New User Creation
+    - As a user, I would like to see the signup form after clicking Signup on homepage, and the new user infomration should be inserted into postgres DB after clicking Sign Up button
+3.  UserStory 03: Encrypt the Password
+    - As a user, I would like my password to be encrypted while storing into postgres db, after clicking Sign Up button on homepage
+4.  UserStory 04: Login user
+    - As a user, I would like to be able to login into the room-designer-appp using my username and password.
+5.  UserStory 05: Validate user at Login
+    - As a user, I would to get some sort of message to indicate either the username or password was incorrect. Ex. "Bad request"
 
-2. As a user I would like to enter my name before playing
-3. As a user I want to see a Play and Next buttons.
-4. As a user when I click on Play button, I want to see the first Trivia question
-5. As a user when I click on the options presented in the answer, I want to see an alert message to indicate that I selected the right or wrong answer
-6. As a user, when I select the answer, I want to see my score updated
-7. As a user, when I click on NEXT button, I want to see the next trivia question
-8. When all questions are answered, I want to see the results of the game with appropriate user messages.
+7)  As a user, when I select the answer, I want to see my score updated
+8)  As a user, when I click on NEXT button, I want to see the next trivia question
+9)  When all questions are answered, I want to see the results of the game with appropriate user messages.
 
 - US02:
 - US03:

@@ -8,12 +8,20 @@
 }
 
 header {
-  grid-column: span 2;
+  grid-column: span 3;
   /* grid-column: 1 / span 2; */
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
 }
+nav {
+  display: flex;
+  width: 180px;
+  justify-content: right;
+  /* grid-gap: 1em; */
+  /* /* border: 1px solid black;*/
+}
+
 nav ul {
   display: flex;
   width: 180px;
@@ -35,11 +43,22 @@ nav ul li a {
   text-decoration: none;
 }
 
+/* body {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 10vw 30vw 10vw;
+  grid-gap: 1em;
+
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+} */
+
 input,
 label {
   /* display: inline;
-  align-items: center;
-  text-align: center; */
+    align-items: center;
+    text-align: center; */
   float: center;
   margin: 5px;
 }
@@ -72,16 +91,10 @@ h4 {
   color: rgb(58, 33, 118);
 }
 
-nav {
-  display: flex;
-  width: 180px;
-  justify-content: left;
-}
-
 /* div.background {
-  /* background: url(/images/r1.jpg) repeat; */
+    /* background: url(/images/r1.jpg) repeat; */
 /* border: 2px solid black; 
-} */
+  } */
 
 div.transparentBox {
   margin: 30px;
