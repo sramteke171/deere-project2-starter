@@ -50,6 +50,9 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 ER Diagram: see ER_Digram.jpeg file (included under images folders)
 ![ER Diagram](public/images/ER_Diagram.jpeg)
 
+App homepage Wireframe: (included under images folders)
+![Webpage Layout](public/images/homepage_wireframe.jpg)
+
 wireframes
 react architecture
 Define the the React components and the architectural design of your app.
