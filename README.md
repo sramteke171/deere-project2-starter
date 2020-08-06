@@ -109,27 +109,28 @@ Footer This will render the header include the nav
 Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 Component Priority Estimated Time Time Invetsted Actual Time
-Adding Form H 4hrs 3.5hrs 3.5hrs
-CSS H 4hrs 6 hrs 6hrs
-Working with database,tables H 8hrs 6.5hrs 6.5hrs
-coding H 8hrs 5.5hrs 5.5hrs
-Testing H 4hrs 4hrs 4hrs
-Documentation M 2hrs 2hrs 2hrs
-Total H 30hrs 27.5hrs 27.5hrs
+
+- Adding Form H 4hrs 3.5hrs 3.5hrs
+- CSS H 4hrs 6 hrs 6hrs
+- Working with database,tables H 8hrs 6.5hrs 6.5hrs
+- Coding H 8hrs 5.5hrs 5.5hrs
+- Testing H 4hrs 4hrs 4hrs
+- Documentation M 2hrs 2hrs 2hrs
+- Total H 30hrs 27.5hrs 27.5hrs
 
 ## Additional Libraries
 
 - Dependencies on following packages:
-  "bcryptjs": "^2.4.3",
-  "cookie-parser": "^1.4.5",
-  "dotenv": "^8.2.0",
-  "ejs": "^3.1.3",
-  "express": "^4.17.1",
-  "jsonwebtoken": "^8.5.1",
-  "method-override": "^3.0.0",
-  "pg": "^8.3.0",
-  "sequelize": "^6.3.3",
-  "sequelize-cli": "^6.2.0"
+  - "bcryptjs": "^2.4.3",
+  - "cookie-parser": "^1.4.5",
+  - "dotenv": "^8.2.0",
+  - "ejs": "^3.1.3",
+  - "express": "^4.17.1",
+  - "jsonwebtoken": "^8.5.1",
+  - "method-override": "^3.0.0",
+  - "pg": "^8.3.0",
+  - "sequelize": "^6.3.3",
+  - "sequelize-cli": "^6.2.0"
 
 ## Code Snippet
 
