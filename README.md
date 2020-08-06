@@ -1,6 +1,6 @@
 ## Project 2 - Sachin Ramteke
 
-![designerApp GIF](/images/homepage.gif)
+![designerApp GIF](public/images/homepage.gif)
 
 ## Project Overview
 
@@ -48,7 +48,7 @@ deployment
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
 ER Diagram: see ER_Digram.jpeg file (included under images folders)
-![ER Diagram](/images/ER_Diagram.jpeg)
+![ER Diagram](public/images/ER_Diagram.jpeg)
 
 wireframes
 react architecture

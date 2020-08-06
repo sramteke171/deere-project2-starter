@@ -14,7 +14,13 @@ header {
   justify-content: space-between;
   padding: 0 10px;
 }
-
+nav {
+  display: flex;
+  width: 180px;
+  justify-content: right;
+  /* grid-gap: 1em; */
+  /* border: 1px solid black; */
+}
 nav ul {
   display: flex;
   width: 180px;
@@ -89,13 +95,6 @@ h4 {
   font-size: 11px;
   text-align: auto;
   color: rgb(58, 33, 118);
-}
-nav {
-  display: flex;
-  width: 180px;
-  justify-content: right;
-  /* grid-gap: 1em; */
-  /* border: 1px solid black; */
 }
 
 ul,

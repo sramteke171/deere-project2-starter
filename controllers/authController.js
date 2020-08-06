@@ -78,6 +78,7 @@ router.post("/login", (req, res) => {
   }).then((foundUser) => {
     if (foundUser) {
       bcrypt.compare(req.body.password, foundUser.password, (err, match) => {
+        console.log("printing match", match);
         if (match) {
           const token = jwt.sign(
             {
@@ -93,9 +94,13 @@ router.post("/login", (req, res) => {
           res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
           res.redirect(`/usersC/profile/${foundUser.id}`);
         } else {
-          return res.sendStatus(400);
+          console.log("inside else ");
+          // return res.sendStatus(400);
+          res.sendStatus(400);
         }
       });
+    } else {
+      res.sendStatus(400);
     }
   });
 });
