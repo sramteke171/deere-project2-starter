@@ -1,6 +1,6 @@
 ## Project 2 - Sachin Ramteke
 
-![designerApp](/images/homepage.gif)
+![designerApp GIF](/images/homepage.gif)
 
 ## Project Overview
 
@@ -22,7 +22,7 @@ Project Description
 * ❗ A git repository not inside the class repo.
 * At least one Github commit per day.
 
-* Include at least 10 User Stories
+* implement at least 10 User Stories
 * Include wireframes that you designed during the planning process
 * Be deployed online and accessible to the public via Heroku
 * Have a link to your hosted working app in the README.md file in your github repo
@@ -34,7 +34,7 @@ Project Description
 - more than 2 models
 - Authentication - encrypt-decrypt passwords
 
-Recommended Features
+Nice to have - Recommended Features
 
 - Add additional relationships
 - Include sign up/log in functionality, with encrypted passwords & an authorization flow
@@ -64,12 +64,23 @@ wireframes
 react architecture
 Define the the React components and the architectural design of your app.
 
-## MVP/PostMVP - 5min
+## Technologies
 
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
+- HTML
+- CSS
+- JavaScript
+- Node.JS
+- EJS
+- Postgres DB
+- Browser compliant: Chrome, IE, Firefox
 
-MVP
-#Ex: - Find and use external api
+## Framework
+
+- MVC Framework
+
+## MVP
+
+#Ex : - Find and use external api
 
 - Render data on webpage
 - Allow user to interact with the page
@@ -89,6 +100,8 @@ Models:
 - room.js
 - item.js
 - index.js
+
+## PostMVP -
 
 PostMVP, there would be addional Models:
 For example, roomItems with many to many association
