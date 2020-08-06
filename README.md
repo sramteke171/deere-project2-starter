@@ -5,9 +5,7 @@
 ## Project Overview
 
 #Project Description
-##Use this section to describe your final project and perhaps any links to relevant sites that help ##convey the concept and\or functionality.
 
-Project Description
 "Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to dcorate the rooms using the available list of design items such as sofa, chair, sidetable, coffee table, wall paintings.
 
 ## Minimum Viable Product (MVP):-
