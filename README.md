@@ -6,7 +6,7 @@
 
 #Project Description
 
-"Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to dcorate the rooms using the available list of design items such as sofa, chair, sidetable, coffee table, wall paintings.
+"Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to decorate the rooms using the available list of design items such as sofa, chair, sidetable, coffee table, wall paintings.
 
 ## Minimum Viable Product (MVP):-
 
