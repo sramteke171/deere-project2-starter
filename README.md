@@ -205,7 +205,7 @@ Refused to apply style from 'https://room-designer-app.herokuapp.com/css/itemInd
 
 RESOLUTION: Heroku didnt recognized Capital letter in the file name. Rename the file with all lower case
 
-## Next Steps: "PostMVP - Stretch Goal"
+## Next Steps: "PostMVP"
 
 - Rewrite Drag & Drop logic for designing room
 
