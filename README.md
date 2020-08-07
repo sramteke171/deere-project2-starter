@@ -8,32 +8,28 @@
 
 "Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to decorate the rooms using the available list of design items such as sofa, chair, sidetable, coffee table, wall paintings.
 
+Developer: Sachin Ramteke
+Learning goal: Develop a full-stack application with the following features
+
+- Password protected
+- Incorporate authentication capabilities
+- Data persistence with PostgreSQL & Sequelize
+- Heroku production deployment
+- Implementation of REST-ful routes
+
 ## Minimum Viable Product (MVP):-
 
-- Users/Designers can see available rooms to design
-- Users can see the design items (ex. sofa, side table, chair etc..) to design their preferred room
+- Designer App goal: The application has been developed to provide a basic functionality:
+  - Users/Designers can see available rooms to design
+  - Users can see the design items (ex. sofa, side table, chair etc..) to design their preferred room
 
-* A working full-stack application, using Node.js, Postgres, Express and EJS
+* A working full-stack application, using Node.js, Express and EJS, Postgres, Sequelize
 * Adherence to the MVC file structure: Models, Views, Controllers
-* At least one model with all 7 RESTful routes and full CRUD.
-* At least 2 models that are associated in some way (e.g. one-to-many, many-to-many, etc)
-* ❗ A git repository not inside the class repo.
+* RESTful routes and full CRUD - Create, Read, Update, Delete functioanlities
 
-* implement at least 10 User Stories
-* Include wireframes that you designed during the planning process
-* Be deployed online and accessible to the public via Heroku
-* Have a link to hosted working app in the README.md file in your github repo
-
-## MVP - Stretch Goal:
-
-- more than 2 models
-- Authentication - encrypt-decrypt passwords
-
-#Nice to have - Recommended Features
-
-- Add additional relationships
-- Include sign up/log in functionality, with encrypted passwords & an authorization flow
-- Use EJS Partials
+- Render data on webpage
+- Allow user to interact with the page
+- Signup, Login, Logout
 
 ## Project Links
 
@@ -51,32 +47,71 @@ ER Diagram: see ER_Digram.jpeg file (included under images folders)
 App homepage Wireframe: (included under images folders)
 ![Webpage Layout](public/images/homepage_wireframe.jpg)
 
-wireframes
-react architecture
-Define the the React components and the architectural design of your app.
-
 ## Technologies
 
 - HTML
 - CSS
 - JavaScript
 - Node.JS
+- JSON ("jsonwebtoken": "^8.5.1")
 - Express
 - EJS
-- Postgres DB
+- Postgres DB ("pg": "^3.0.0")
+- Sequelize ("sequelize": "^6.3.3"; "sequelize-cli": "^6.2.0")
 - Browser compliant: Chrome, IE, Firefox
 
-## Framework
+## Additional Libraries
+
+- Dependencies on following packages:
+  - "bcryptjs": "^2.4.3",
+  - "cookie-parser": "^1.4.5",
+  - "dotenv": "^8.2.0",
+  - "ejs": "^3.1.3",
+  - "express": "^4.17.1",
+  - "jsonwebtoken": "^8.5.1",
+  - "method-override": "^3.0.0",
+  - "pg": "^8.3.0",
+  - "sequelize": "^6.3.3",
+  - "sequelize-cli": "^6.2.0"
+
+## Framework used
 
 - MVC Framework
 
-## MVP
+Controllers:
 
-- Render data on webpage
-- Allow user to interact with the page
-- Signup, Login, Logout. CRUD - Create, Read, Update, Delete functioanlities
+- authController.js - for aunthentication routes
+- userController.js - routes for user actions
+- roomController.js - routes for room design
+- itemController.js - for design items
 
-#MVP User Stories:
+Models:
+
+- city.js
+- user.js
+- room.js
+- item.js
+- index.js
+
+Views:
+
+- index.ejs
+- signup.ejs
+- login.js
+- profile.ejs
+- room.ejs
+- newRoom.ejs
+- edit.ejs
+- design.ejs
+- item.ejs
+
+## Components
+
+- App:- This will make the initial data pull and include functionality, React Router
+- Header:- This will render the header include the nav
+- Footer:- This will render the header include the nav
+
+## MVP User Stories:
 
 1.  UserStory 01: App Landing page
 
@@ -144,41 +179,11 @@ Define the the React components and the architectural design of your app.
 
     - As a user, after clicking in the enlarged room to design, I would like to see the list of all available design items. for example, sofa, side table, coffe table, carpet, wall painting etc.
 
-Controllers:
-
-- authController.js - for aunthentication routes
-- userController.js - routes for user actions
-- roomController.js - routes for room design
-- itemController.js - for design items
-
-Models:
-
-- city.js
-- user.js
-- room.js
-- item.js
-- index.js
-
-## PostMVP - Stretch Goal:
-
-- Use a CSS framework like Bootstrap
-- Incorporate Google Maps
-
-## Above & Beyond:
+## Stretch Goal / Above & Beyond: (Drag and drop is partially working)
 
 - Users can "click"/"Drag and drop" design items to decorate the rooms.
   PostMVP, there would be addional Models:
   For example, roomItems with many to many association
-
-- roomItems.js
-
-## Components
-
-#Component Description
-
-- App:- This will make the initial data pull and include React Router
-- Header This will render the header include the nav
-- Footer This will render the header include the nav
 
 ## Time Frames
 
@@ -192,25 +197,21 @@ Component Priority Estimated Time Time Invetsted Actual Time
 - Documentation M 2hrs 2hrs 2hrs
 - Total H 30hrs 27.5hrs 27.5hrs
 
-## Additional Libraries
-
-- Dependencies on following packages:
-  - "bcryptjs": "^2.4.3",
-  - "cookie-parser": "^1.4.5",
-  - "dotenv": "^8.2.0",
-  - "ejs": "^3.1.3",
-  - "express": "^4.17.1",
-  - "jsonwebtoken": "^8.5.1",
-  - "method-override": "^3.0.0",
-  - "pg": "^8.3.0",
-  - "sequelize": "^6.3.3",
-  - "sequelize-cli": "^6.2.0"
-
-## Code Snippet
-
 ## Issues and Resolutions
 
 ERROR:
 Refused to apply style from 'https://room-designer-app.herokuapp.com/css/itemIndex.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
 
 RESOLUTION: Heroku didnt recognized Capital letter in the file name. Rename the file with all lower case
+
+## Next Steps: "PostMVP - Stretch Goal"
+
+- Rewrite Drag & Drop logic for designing room
+
+#Nice to have - Recommended Features:
+
+- Use a CSS framework like Bootstrap
+- Add additional relationships
+- Use EJS Partials
+- Incorporate Google Maps
+- Google Chart
