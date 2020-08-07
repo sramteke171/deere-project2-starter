@@ -9,7 +9,8 @@
 "Design Room" App helps users/designers to browse the available rooms to design, and use their creative skills to decorate the rooms using the available list of design items such as sofa, chair, sidetable, coffee table, wall paintings.
 
 Developer: Sachin Ramteke
-Learning goal: Develop a full-stack application with the following features
+
+### Learning Goal: Develop a full-stack application with the following features
 
 - Password protected
 - Incorporate authentication capabilities
